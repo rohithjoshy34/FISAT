@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,17 +9,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-  signin="Sigin";
-  email:any;
-  pwd:any;
+  constructor(public router: Router) { }
+  signin:any;
+  // name:any;
+  // pwd:any;
   ngOnInit() {
+    this.signin="Sigin";
   }
-  login(){
-    console.log(this.email);
-    console.log(this.pwd);
-    
-  }
+  // profileForm = new FormGroup({
+  //   email: new FormControl(''),
+  //   password: new FormControl('')
+  // });
 
+  data: any = {};
+
+  onSubmit(f) {
+    console.log(f.name);
+    console.log(f.pass);
+if(f.name=="admin"&&f.pass=="admin"){
+  console.log("true");
+  this.router.navigate(['Home']);
 }
+  }
+}
+
+  // login(){
+  //   // console.log(this.profileForm);
+  //   // console.log(this.pwd);
+    
+  // }
+
+
 

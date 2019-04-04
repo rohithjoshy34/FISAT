@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GetdataService } from 'src/app/services/getdata.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 @Component({

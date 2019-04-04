@@ -10,9 +10,11 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { HomeComponent } from './components/home/home.component';
 import { Routes, RouterModule } from '@angular/router';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ColorDirective } from './directives/color.directive';
+import { UserdataComponent } from './components/userdata/userdata.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
@@ -30,12 +32,14 @@ const routes: Routes = [
     LoginComponent,
     RegistrationComponent,
     HomeComponent,
-    ColorDirective
+    ColorDirective,
+    UserdataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
     

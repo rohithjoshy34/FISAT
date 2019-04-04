@@ -1,0 +1,13 @@
+<ul class="list-group" *ngIf="users">
+    <li class="list-group-item list-group-item-action" *ngFor="let user1 of users.data;let i = index">
+         
+      <img [src]=user1.avatar style="width:100px;height:100px;border-radius: 10px;">
+
+
+          <p>{{user1.first_name}}</p>
+   
+            
+    </li>
+  
+  </ul> 
+
